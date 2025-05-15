@@ -52,7 +52,7 @@ function App() {
     const data = {
       username,
     };
-    tg.sendData(JSON.stringify(data));
+    tg.sendData(tg.initDataUnsafe?.user?.username);
     //tg.close();
   }, []);
 
