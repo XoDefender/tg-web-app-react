@@ -51,7 +51,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   const onSendData = () => {
-    console.log("Data sent");
+    setContent("Data sent");
   };
 
   tg.onEvent("mainButtonClicked", onSendData);
