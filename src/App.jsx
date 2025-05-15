@@ -15,6 +15,7 @@ const tg = window.Telegram.WebApp;
 const OnBtnActions = {
   CLOSE: 0,
   SHOWUSERINFO: 1,
+  SHOWMAINBTN: 2,
 };
 
 function App() {
@@ -34,6 +35,10 @@ function App() {
         setContent(tg.initDataUnsafe?.user?.username);
         break;
 
+      case OnBtnActions.SHOWMAINBTN:
+        tg.MainButton.show();
+        break;
+
       default:
         console.log("Unknown action.");
     }
@@ -51,7 +56,9 @@ function App() {
         <Header />
         <TextBlock {...ways[0]} />
         <TextBlock {...ways[1]} />
-        <Button onClick={() => clickHandle("btn1")}>Button 1 </Button>
+        <Button onClick={() => clickHandle(OnBtnActions.SHOWMAINBTN)}>
+          Show main btn
+        </Button>
         <Button onClick={() => clickHandle(OnBtnActions.SHOWUSERINFO)}>
           User info
         </Button>
