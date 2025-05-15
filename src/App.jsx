@@ -52,6 +52,13 @@ function App() {
 
   const onSendData = () => {
     setContent("Data sent");
+    const username = tg.initDataUnsafe?.user?.username;
+    const data = {
+      username,
+    };
+
+    tg.SendData(JSON.stringify(data));
+    // tg.close();
   };
 
   tg.onEvent("mainButtonClicked", onSendData);
