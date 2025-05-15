@@ -52,7 +52,7 @@ function App() {
     const data = {
       username,
     };
-    tg.SendData(JSON.stringify(data));
+    tg.sendData(JSON.stringify(data));
     tg.close();
   }, []);
 
