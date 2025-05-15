@@ -48,18 +48,19 @@ function App() {
 
   const onSendData = useCallback(() => {
     setContent("Data sent");
-
     const username = tg.initDataUnsafe?.user?.username;
     const data = {
       username,
     };
-
     tg.SendData(JSON.stringify(data));
     tg.close();
   }, []);
 
   useEffect(() => {
     tg.onEvent("mainButtonClicked", onSendData);
+    return () => {
+      tg.offEvent("mainButtonClicked", onSendData);
+    };
   });
 
   return (
