@@ -47,9 +47,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   const onSendData = useCallback(() => {
-    const username = tg.initDataUnsafe?.user?.username;
-
-    tg.sendData(username);
+    tg.sendData(tg.sendData(JSON.stringify({ username: "testuser" })));
     setContent(username);
 
     tg.close();
