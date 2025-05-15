@@ -50,6 +50,12 @@ function App() {
 
   const [count, setCount] = useState(0);
 
+  const onSendData = () => {
+    console.log("Data sent");
+  };
+
+  tg.WebApp.onEvent("mainButtonClicked", onSendData);
+
   return (
     <>
       <div>
