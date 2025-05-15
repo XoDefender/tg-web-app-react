@@ -54,7 +54,7 @@ function App() {
     console.log("Data sent");
   };
 
-  tg.WebApp.onEvent("mainButtonClicked", onSendData);
+  tg.onEvent("mainButtonClicked", onSendData);
 
   return (
     <>
