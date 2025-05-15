@@ -47,13 +47,10 @@ function App() {
   const [count, setCount] = useState(0);
 
   const onSendData = useCallback(() => {
-    setContent("Data sent");
     const username = tg.initDataUnsafe?.user?.username;
-    const data = {
-      username,
-    };
-    tg.sendData(tg.initDataUnsafe?.user?.username);
-    //tg.close();
+    tg.sendData("Hello");
+    setContent("Hello");
+    tg.close();
   }, []);
 
   useEffect(() => {
