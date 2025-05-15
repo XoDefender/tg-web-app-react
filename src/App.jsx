@@ -54,7 +54,7 @@ function App() {
       username,
     };
 
-    tg.SendData(JSON.stringify(data));
+    //tg.SendData(JSON.stringify(data));
     tg.close();
   };
 
