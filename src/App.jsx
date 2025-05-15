@@ -58,7 +58,7 @@ function App() {
     };
 
     tg.SendData(JSON.stringify(data));
-    // tg.close();
+    tg.close();
   };
 
   tg.onEvent("mainButtonClicked", onSendData);
