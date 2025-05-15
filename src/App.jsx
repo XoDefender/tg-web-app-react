@@ -53,7 +53,7 @@ function App() {
       username,
     };
     tg.sendData(JSON.stringify(data));
-    tg.close();
+    //tg.close();
   }, []);
 
   useEffect(() => {
