@@ -44,14 +44,11 @@ function App() {
     }
   }
 
-  function clickHandleTg(type) {
-    tg.close();
-  }
-
   const [count, setCount] = useState(0);
 
   const onSendData = () => {
     setContent("Data sent");
+
     const username = tg.initDataUnsafe?.user?.username;
     const data = {
       username,
