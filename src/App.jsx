@@ -47,7 +47,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   const onSendData = useCallback(() => {
-    tg.sendData(JSON.stringify({ username: "testuser" }));
+    tg.sendData(JSON.stringify({ username: "user" }));
     //setContent(username);
     tg.close();
   }, []);
